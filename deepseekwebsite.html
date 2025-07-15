@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>DeepSeek - 探索未至之境</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.deepseek.com/logo.png?x-image-process=image%2Fresize%2Cw_1920" type="image/png">
+  <style>
+    body {font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; margin:0; background:#f7f8fa; color:#222;}
+    header, footer {background: #fff;}
+    .container {max-width: 1100px; margin: 0 auto; padding: 0 20px;}
+    .navbar {display: flex; align-items: center; justify-content: space-between; padding: 18px 0;}
+    .navbar img {height: 38px;}
+    .nav-links {display: flex; gap: 22px;}
+    .nav-links a {color: #222; text-decoration: none; font-size: 16px; font-weight: 500;}
+    .nav-links a:hover {color: #4462fe;}
+    .lang-switch {margin-left: 18px;}
+    .announcement {background: linear-gradient(90deg, #4462fe 0%, #00c2ff 100%); color: #fff; text-align:center; padding: 10px 0; font-size:15px;}
+    .announcement a {color: #fff; text-decoration: underline;}
+    .main-section {text-align:center; padding: 80px 0 60px 0;}
+    .main-section h1 {font-size: 42px; margin-bottom: 16px; font-weight: 700;}
+    .main-section p {color: #444; font-size: 20px; margin-bottom: 36px;}
+    .main-section .cta-btn {display: inline-block; background: #4462fe; color: #fff; font-size: 18px; padding: 16px 38px; border-radius: 36px; text-decoration:none; font-weight: 600; box-shadow: 0 2px 12px #4462fe22;}
+    .main-section .cta-btn:hover {background: #2843d2;}
+    .main-section .apps {margin-top: 28px; font-size: 15px;}
+    .main-section .apps a {color: #4462fe; margin: 0 10px;}
+    .feature-list {display:flex; flex-wrap:wrap; gap:32px; justify-content:center; margin: 60px 0 30px 0;}
+    .feature-card {background: #fff; border-radius: 16px; box-shadow:0 2px 12px #2233660a; padding: 34px 36px; width: 260px;}
+    .feature-card h3 {font-size: 20px; margin-bottom: 10px;}
+    .feature-card p {font-size: 15px; color: #555;}
+    .footer {background: #fff; border-top: 1px solid #eee; margin-top: 60px;}
+    .footer-top {display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 30px 0;}
+    .footer-logo {display:flex; align-items:center; gap: 10px;}
+    .footer-logo img {height: 30px;}
+    .footer-links {display:flex; flex-direction: column; gap: 6px;}
+    .footer-links a {color: #333; font-size:14px; text-decoration:none;}
+    .footer-links a:hover {color: #4462fe;}
+    .footer-social {display:flex; gap:15px;}
+    .footer-social a {color: #222; text-decoration: none; font-size: 20px;}
+    .footer-bottom {font-size: 13px; color: #999; padding: 14px 0; border-top:1px solid #eee; text-align:center;}
+    .footer-legal {margin-top:5px;}
+    .footer-legal a {color: #888; text-decoration: none; margin:0 4px;}
+    .footer-legal a:hover {text-decoration: underline;}
+    @media (max-width: 780px) {
+      .main-section {padding: 36px 0;}
+      .feature-list {gap:18px;}
+      .feature-card {width: 100%; max-width: 330px;}
+      .footer-top {flex-direction:column; align-items:flex-start; gap:20px;}
+      .navbar {flex-direction: column; gap: 10px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="/"><img src="https://cdn.deepseek.com/logo.png?x-image-process=image%2Fresize%2Cw_1920" alt="DeepSeek Logo"></a>
+      <nav class="nav-links">
+        <a href="https://platform.deepseek.com/">API开放平台</a>
+        <a href="https://www.deepseek.com/en" class="lang-switch">English</a>
+      </nav>
+    </div>
+  </header>
+  <div class="announcement">
+    🎉 DeepSeek-R1 模型更新，思考更深，推理更强，在网页端、APP 和 API 全面上线，<a href="https://api-docs.deepseek.com/zh-cn/news/news250528" target="_blank">点击查看详情</a>。
+  </div>
+  <main>
+    <section class="main-section">
+      <img src="https://cdn.deepseek.com/logo.png?x-image-process=image%2Fresize%2Cw_1920" alt="DeepSeek Logo" style="width: 66px; margin-bottom: 20px;">
+      <h1>探索未至之境</h1>
+      <p>与 DeepSeek-V3 和 R1 免费对话，体验全新旗舰模型</p>
+      <a class="cta-btn" href="https://chat.deepseek.com/" target="_blank">开始对话</a>
+      <div class="apps">
+        获取手机 App &nbsp;|&nbsp; 
+        <a href="https://download.deepseek.com/app/" target="_blank">下载 App</a>
+      </div>
+    </section>
+
+    <section class="feature-list container">
+      <div class="feature-card">
+        <h3>AI助手</h3>
+        <p>搜索、写作、阅读、解题、翻译，多场景全能支持。</p>
+      </div>
+      <div class="feature-card">
+        <h3>API 开放平台</h3>
+        <p>灵活接入，助力开发者快速创新应用。</p>
+      </div>
+      <div class="feature-card">
+        <h3>多端体验</h3>
+        <p>网页、App 和 API 全面支持，随时随地使用 AI。</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-logo">
+        <img src="https://cdn.deepseek.com/logo.png?x-image-process=image%2Fresize%2Cw_1920" alt="DeepSeek Logo">
+        <span>DeepSeek</span>
+      </div>
+      <div class="footer-links">
+        <strong>研究</strong>
+        <a href="https://github.com/deepseek-ai/DeepSeek-R1" target="_blank">DeepSeek R1</a>
+        <a href="https://github.com/deepseek-ai/DeepSeek-V3" target="_blank">DeepSeek V3</a>
+        <a href="https://github.com/deepseek-ai/DeepSeek-Coder-V2" target="_blank">DeepSeek Coder V2</a>
+        <a href="https://github.com/deepseek-ai/DeepSeek-VL" target="_blank">DeepSeek VL</a>
+        <a href="https://github.com/deepseek-ai/DeepSeek-V2" target="_blank">DeepSeek V2</a>
+        <a href="https://github.com/deepseek-ai/DeepSeek-Coder" target="_blank">DeepSeek Coder</a>
+        <a href="https://github.com/deepseek-ai/DeepSeek-Math" target="_blank">DeepSeek Math</a>
+        <a href="https://github.com/deepseek-ai/DeepSeek-LLM" target="_blank">DeepSeek LLM</a>
+      </div>
+      <div class="footer-links">
+        <strong>产品</strong>
+        <a href="https://download.deepseek.com/app/" target="_blank">DeepSeek App</a>
+        <a href="https://chat.deepseek.com/" target="_blank">DeepSeek 网页版</a>
+        <a href="https://platform.deepseek.com/" target="_blank">开放平台</a>
+        <a href="https://api-docs.deepseek.com/quick_start/pricing" target="_blank">API 价格</a>
+        <a href="https://status.deepseek.com/" target="_blank">服务状态</a>
+      </div>
+      <div class="footer-links">
+        <strong>法务 & 安全</strong>
+        <a href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html" target="_blank">隐私政策</a>
+        <a href="https://cdn.deepseek.com/policies/en-US/deepseek-terms-of-use.html" target="_blank">用户协议</a>
+        <a href="mailto:security@deepseek.com">反馈安全漏洞</a>
+      </div>
+      <div class="footer-links">
+        <strong>加入我们</strong>
+        <a href="https://app.mokahr.com/social-recruitment/high-flyer/140576" target="_blank">岗位详情</a>
+      </div>
+      <div class="footer-social">
+        <a href="mailto:service@deepseek.com" title="Email">📧</a>
+        <a href="https://github.com/deepseek-ai" target="_blank" title="GitHub">🐙</a>
+        <a href="https://twitter.com/deepseek_ai" target="_blank" title="Twitter">🐦</a>
+        <a href="https://www.zhihu.com/org/deepseek-75" target="_blank" title="知乎">知</a>
+        <a href="https://www.xiaohongshu.com/user/profile/66821202000000001b01a005" target="_blank" title="小红书">红</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 杭州深度求索人工智能基础技术研究有限公司 版权所有
+      <div class="footer-legal">
+        <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2023025841号</a>
+        <a href="https://tsm.miit.gov.cn/dxxzsp/xkz/xkzgl/resource/qiyesearch.jsp?num=%E6%B5%99B2-20250178&type=xuke" target="_blank">浙B2-20250178</a>
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=33010502011812" target="_blank">浙公网安备33010502011812号</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
