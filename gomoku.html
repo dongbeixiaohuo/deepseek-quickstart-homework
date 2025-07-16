@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五子棋游戏</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        #board {
+            display: grid;
+            grid-template-columns: repeat(15, 40px);
+            grid-template-rows: repeat(15, 40px);
+            background-color: #d2b48c;
+            border: 2px solid #8b4513;
+        }
+        .cell {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #8b4513;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .black, .white {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .black {
+            background-color: black;
+        }
+        .white {
+            background-color: white;
+        }
+        #status {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="board"></div>
+        <div id="status">黑方落子</div>
+    </div>
+
+    <script>
+        const boardSize = 15;
+        const board = [];
+        let currentPlayer = 'black';
+        const statusElement = document.getElementById('status');
+
+        function createBoard() {
+            const boardElement = document.getElementById('board');
+            for (let i = 0; i < boardSize; i++) {
+                const row = [];
+                for (let j = 0; j < boardSize; j++) {
+                    const cell = document.createElement('div');
+                    cell.classList.add('cell');
+                    cell.dataset.row = i;
+                    cell.dataset.col = j;
+                    cell.addEventListener('click', handleCellClick);
+                    boardElement.appendChild(cell);
+                    row.push(null);
+                }
+                board.push(row);
+            }
+        }
+
+        function handleCellClick(event) {
+            const row = parseInt(event.target.dataset.row);
+            const col = parseInt(event.target.dataset.col);
+            if (board[row][col] !== null) return;
+
+            const stone = document.createElement('div');
+            stone.classList.add(currentPlayer);
+            event.target.appendChild(stone);
+            board[row][col] = currentPlayer;
+
+            if (checkWin(row, col)) {
+                statusElement.textContent = `${currentPlayer === 'black' ? '黑方' : '白方'}获胜！`;
+                document.getElementById('board').removeEventListener('click', handleCellClick);
+                return;
+            }
+
+            currentPlayer = currentPlayer === 'black' ? 'white' : 'black';
+            statusElement.textContent = `${currentPlayer === 'black' ? '黑方' : '白方'}落子`;
+        }
+
+        function checkWin(row, col) {
+            const directions = [
+                [1, 0], // 垂直
+                [0, 1], // 水平
+                [1, 1], // 对角线（右下）
+                [1, -1] // 对角线（左下）
+            ];
+
+            for (const [dx, dy] of directions) {
+                let count = 1;
+                for (let i = 1; i < 5; i++) {
+                    const x = row + dx * i;
+                    const y = col + dy * i;
+                    if (x >= 0 && x < boardSize && y >= 0 && y < boardSize && board[x][y] === currentPlayer) {
+                        count++;
+                    } else {
+                        break;
+                    }
+                }
+                for (let i = 1; i < 5; i++) {
+                    const x = row - dx * i;
+                    const y = col - dy * i;
+                    if (x >= 0 && x < boardSize && y >= 0 && y < boardSize && board[x][y] === currentPlayer) {
+                        count++;
+                    } else {
+                        break;
+                    }
+                }
+                if (count >= 5) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        createBoard();
+    </script>
+</body>
+</html>
